@@ -19,4 +19,4 @@ settings:
     - name: Files
       condition: buildSucceeds
       paths:
-        - test
+        - tests
