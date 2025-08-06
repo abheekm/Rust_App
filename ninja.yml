@@ -1,0 +1,22 @@
+name: Rust_App_YML
+description: This is Rust_App_YML sample
+version: 1.0
+settings:
+  build-steps:
+    - name: Build
+      key: runner_cmd
+      disabled: false
+      workDir: ''
+      args:
+        commands: cargo build --release
+    - name: Test
+      key: runner_cmd
+      disabled: false
+      workDir: ''
+      args:
+        commands: cargo test
+  artifacts:
+    - name: Files
+      condition: buildSucceeds
+      paths:
+        - test
