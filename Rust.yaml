@@ -1,0 +1,32 @@
+name: Rust_App_Public
+description: ""
+settings:
+  vcs-steps:
+  - key: vcs_git
+    name: vcs
+    disabled: false
+    args:
+      authType: anonymous
+      branch: master
+      url: https://github.com/BurntSushi/ripgrep.git
+    argsProtected: {}
+  build-steps:
+  - key: runner_cmd
+    name: Build
+    disabled: false
+    workDir: ""
+    args:
+      commands: cargo build --release
+    argsProtected: {}
+  - key: runner_cmd
+    name: Test
+    disabled: false
+    workDir: ""
+    args:
+      commands: cargo test
+    argsProtected: {}
+  artifacts:
+  - name: Sample
+    condition: buildSucceeds
+    paths:
+    - '*'
