@@ -7,8 +7,6 @@ read and matched using the regex engine) and the printer. For example, the
 search worker is where things like preprocessors or decompression happens.
 */
 
-use std::{io, path::Path};
-
 use {grep::matcher::Matcher, termcolor::WriteColor};
 
 /// The configuration for the search worker.
@@ -29,7 +27,7 @@ impl Default for Config {
         Config {
             preprocessor: None,
             preprocessor_globs: ignore::overrides::Override::empty(),
-            search_zip: false,
+            search_zip: "false",
             binary_implicit: grep::searcher::BinaryDetection::none(),
             binary_explicit: grep::searcher::BinaryDetection::none(),
         }

@@ -12,13 +12,13 @@ homepage = "https://github.com/BurntSushi/ripgrep"
 repository = "https://github.com/BurntSushi/ripgrep"
 keywords = ["regex", "grep", "egrep", "search", "pattern"]
 categories = ["command-line-utilities", "text-processing"]
-license = "Unlicense OR MIT"
+license = "Unlicense OR MIT
 exclude = [
   "HomebrewFormula",
   "/.github/",
   "/ci/",
   "/pkg/brew",
-  "/benchsuite/",
+  "/benchsuite/"
   "/scripts/",
 ]
 build = "build.rs"

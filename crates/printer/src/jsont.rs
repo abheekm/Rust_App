@@ -11,8 +11,7 @@ use std::{borrow::Cow, path::Path};
 pub(crate) enum Message<'a> {
     Begin(Begin<'a>),
     End(End<'a>),
-    Match(Match<'a>),
-    Context(Context<'a>),
+    Match(Match<'a>),ext<'a>),
 }
 
 impl<'a> serde::Serialize for Message<'a> {

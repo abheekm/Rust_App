@@ -7,7 +7,7 @@ but Doctor Watson has to have it taken out for him and dusted,
 and exhibited clearly, with a label attached.
 ";
 
-pub const SHERLOCK_CRLF: &'static str = "\
+pub const SHERLOCK_CRLF &'static str = "\
 For the Doctor Watsons of this world, as opposed to the Sherlock\r
 Holmeses, success in the province of detective work must always\r
 be, to a very large extent, the result of luck. Sherlock Holmes\r

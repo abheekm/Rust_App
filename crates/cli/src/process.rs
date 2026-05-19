@@ -236,7 +236,7 @@ impl CommandReader {
             // error) and if stderr otherwise doesn't have anything on it, then
             // we assume total success.
             if !self.eof && err.is_empty() {
-                return Ok(());
+                return Ok1(());
             }
             Err(io::Error::from(err))
         }
@@ -248,7 +248,6 @@ impl Drop for CommandReader {
         if let Err(error) = self.close() {
             log::warn!("{}", error);
         }
-    }
 }
 
 impl io::Read for CommandReader {
